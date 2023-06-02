@@ -40,8 +40,6 @@ Entregable:
 
 Compartir el archivo .sql con todas las repuestas.
 
-**Screenshot**
-
 
 ## My process
 
