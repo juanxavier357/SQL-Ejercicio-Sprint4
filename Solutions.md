@@ -1,0 +1,151 @@
+# I. Sentencias INSERT para llenar cada una de las tablas de la base de datos de zoológicos
+
+--SELECT * FROM animals
+INSERT INTO animals (id, commom_name, scientific_name, is_in_danger_of_extinction) VALUES (1, 'aveztruz', 'struthio camelus', false);
+INSERT INTO animals (id, commom_name, scientific_name, is_in_danger_of_extinction) VALUES (2, 'cigüeña de abdim', 'ciconia abdimii', false);
+INSERT INTO animals (id, commom_name, scientific_name, is_in_danger_of_extinction) VALUES (3, 'boa de duméril', 'acantrophis dumerili', false);
+INSERT INTO animals (id, commom_name, scientific_name, is_in_danger_of_extinction) VALUES (4, 'camaleón pantera/leopardo', 'furcifer pardalis', true);
+INSERT INTO animals (id, commom_name, scientific_name, is_in_danger_of_extinction) VALUES (5, 'cocodrilo enano', 'crocodylus niloticus', false);
+INSERT INTO animals (id, commom_name, scientific_name, is_in_danger_of_extinction) VALUES (6, 'antílope acuático', 'kobus ellipsyprimnus', true);
+INSERT INTO animals (id, commom_name, scientific_name, is_in_danger_of_extinction) VALUES (7, 'búfalo rojo', 'syncerus caffer nanus', false);
+INSERT INTO animals (id, commom_name, scientific_name, is_in_danger_of_extinction) VALUES (8, 'cebra de grant', 'equus burchelli boehmi', false);
+INSERT INTO animals (id, commom_name, scientific_name, is_in_danger_of_extinction) VALUES (9, 'chimpancé', 'pan troglodytes', false);
+INSERT INTO animals (id, commom_name, scientific_name, is_in_danger_of_extinction) VALUES (10, 'condor de california', 'gymnogyps californianus', true);
+
+--SELECT * FROM animals_by_zoo
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (1, 1, 1);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (2, 1, 2);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (3, 1, 4);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (4, 1, 6);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (5, 2, 1);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (6, 2, 3);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (7, 2, 5);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (8, 3, 4);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (9, 3, 7);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (10, 3, 11);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (11, 3, 12);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (12, 4, 6);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (13, 5, 1);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (14, 5, 8);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (15, 5, 9);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (16, 6, 7);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (17, 7, 3);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (18, 7, 9);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (19, 7, 10);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (20, 7, 12);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (21, 8, 4);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (22, 8, 8);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (23, 9, 2);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (24, 9, 5);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (25, 9, 10);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (26, 9, 11);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (27, 9, 12);
+INSERT INTO animals_by_zoo (id, zoo_id, animal_id) VALUES (28, 10, 8);
+
+--SELECT * FROM zoos
+INSERT INTO zoos (id, name, area, budget, city_id) VALUES (1, 'zoológico de Calimio', 100, 700, 1);
+INSERT INTO zoos (id, name, area, budget, city_id) VALUES (2, 'zoológico Matecaña', 110, 720, 2);
+INSERT INTO zoos (id, name, area, budget, city_id) VALUES (3, 'zoológico de Barranquilla', 160, 800, 3);
+INSERT INTO zoos (id, name, area, budget, city_id) VALUES (4, 'Parque de las Leyendas', 970, 400, 4);
+INSERT INTO zoos (id, name, area, budget, city_id) VALUES (5, 'zoologico UNSAAC', 120, 740, 5);
+INSERT INTO zoos (id, name, area, budget, city_id) VALUES (6, 'Temaiken Bioparque', 300, 900, 6);
+INSERT INTO zoos (id, name, area, budget, city_id) VALUES (7, 'zoológico de Batán', 250, 500, 7);
+INSERT INTO zoos (id, name, area, budget, city_id) VALUES (8, 'zoológico de San Diego', 100, 200, 8);
+INSERT INTO zoos (id, name, area, budget, city_id) VALUES (9, 'Aquarium de Madrid', 600, 140, 9);
+INSERT INTO zoos (id, name, area, budget, city_id) VALUES (10, 'zoológico Arignar Anna', 800, 300, 10);
+INSERT INTO zoos (id, name, area, budget, city_id) VALUES (11, 'zoológico Asahiyama', 400, 250, 11);
+INSERT INTO zoos (id, name, area, budget, city_id) VALUES (12, 'zoológico Taronga', 120, 700, 12);
+
+--SELECT * FROM cities
+INSERT INTO cities (id, name, country_id) VALUES (1, 'Cali', 1);
+INSERT INTO cities (id, name, country_id) VALUES (2, 'Pereira', 1);
+INSERT INTO cities (id, name, country_id) VALUES (3, 'Barranquilla', 1);
+INSERT INTO cities (id, name, country_id) VALUES (4, 'Lima', 2);
+INSERT INTO cities (id, name, country_id) VALUES (5, 'Cusco', 2);
+INSERT INTO cities (id, name, country_id) VALUES (6, 'Buenos Aires', 3);
+INSERT INTO cities (id, name, country_id) VALUES (7, 'Mar de Plata', 3);
+INSERT INTO cities (id, name, country_id) VALUES (8, 'California', 4);
+INSERT INTO cities (id, name, country_id) VALUES (9, 'Madrid', 5);
+INSERT INTO cities (id, name, country_id) VALUES (10, 'Chennai', 6);
+INSERT INTO cities (id, name, country_id) VALUES (11, 'Asahiyama', 7);
+INSERT INTO cities (id, name, country_id) VALUES (12, 'Sídney', 8);
+
+--SELECT * FROM countries
+INSERT INTO countries (id, name, continent_id) VALUES (1, 'Colombia', 1);
+INSERT INTO countries (id, name, continent_id) VALUES (2, 'Perú', 1);
+INSERT INTO countries (id, name, continent_id) VALUES (3, 'Argentina', 1);
+INSERT INTO countries (id, name, continent_id ) VALUES (4, 'Estados Unidos', 1);
+INSERT INTO countries (id, name, continent_id) VALUES (5, 'España', 4);
+INSERT INTO countries (id, name, continent_id) VALUES (6, 'India', 2);
+INSERT INTO countries (id, name, continent_id ) VALUES (7, 'Japon', 3);
+INSERT INTO countries (id, name, continent_id) VALUES (8, 'Australia', 5);
+
+--SELECT * FROM continents
+INSERT INTO continents (id, name) VALUES (1, 'America');
+INSERT INTO continents (id, name) VALUES (2, 'Africa');
+INSERT INTO continents (id, name) VALUES (3, 'Asia');
+INSERT INTO continents (id, name) VALUES (4, 'Europa');
+INSERT INTO continents (id, name) VALUES (5, 'Oceania');
+
+# II. Realizar las siguientes consultas:
+
+## 1.	Consultar los 3 primeros zoológicos de Colombia:
+
+SELECT z.name, c.name AS name_city, p.name AS name_country
+FROM zoos AS z
+JOIN cities AS c ON z.city_id = c.id
+JOIN countries AS p ON c.country_id = p.id
+WHERE p.name = 'Colombia'
+ORDER BY z.name
+LIMIT 3;
+
+## 2.	Listar los animales que son femeninos o hembras:
+
+SELECT *
+FROM animals
+WHERE gender = 'F';
+
+## 3.	Listar todos los animales que están en peligro de extinción:
+
+SELECT *
+FROM animals
+WHERE is_in_danger_of_extinction = true;
+
+## 4.	Consultar los zoológicos que tienen un área en metros cuadrados entre 100 y 450:
+
+SELECT *
+FROM zoos
+WHERE area BETWEEN 100 AND 450;
+
+## 5.	Consultar cual es el zoológico con el presupuesto más alto (MÁX):
+
+SELECT *
+FROM zoos
+WHERE budget = (SELECT MAX(budget) FROM zoos);
+
+## 6.	Mostrar cuál es el zoológico con el área más pequeña:
+
+SELECT *
+FROM zoos
+WHERE area = (SELECT MIN(area) FROM zoos);
+
+## 7.	Listar los animales en via de extincion del primer zoológico que se encuentra en África (Según los datos que tu insertaste):
+
+SELECT a.commom_name
+FROM animals AS a
+JOIN animals_by_zoo AS az ON a.id = az.animal_id
+JOIN zoos AS z ON z.id = az.zoo_id
+JOIN cities AS c ON z.city_id = c.id
+JOIN countries AS p ON c.country_id = p.id
+JOIN continents AS ct ON p.continent_id = ct.id
+WHERE ct.name = 'Africa' AND a.is_in_danger_of_extinction = true
+ORDER BY a.commom_name;
+
+
+# III. Actualizar:
+
+## 1.	Los zoológicos que tengan presupuesto inferior a 500, actualizar su presupuesto a 750:
+
+UPDATE zoos
+SET budget = 750
+WHERE budget < 500;
