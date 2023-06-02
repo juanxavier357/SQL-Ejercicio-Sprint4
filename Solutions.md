@@ -1,4 +1,4 @@
-* I. Sentencias INSERT para llenar cada una de las tablas de la base de datos de zoológicos
+# I. Sentencias INSERT para llenar cada una de las tablas de la base de datos de zoológicos
 
 --SELECT * FROM animals
 --INSERT INTO animals (id, commom_name, scientific_name, is_in_danger_of_extinction) VALUES (1, 'aveztruz', 'struthio camelus', false);
@@ -88,9 +88,9 @@
 --INSERT INTO continents (id, name) VALUES (5, 'Oceania');
 
 
-* II. Realizar las siguientes consultas:
+# II. Realizar las siguientes consultas:
 
-** 1.	Consultar los 3 primeros zoológicos de Colombia:
+## 1.	Consultar los 3 primeros zoológicos de Colombia:
 --SELECT z.name, c.name AS name_city, p.name AS name_country
 --FROM zoos AS z
 --JOIN cities AS c ON z.city_id = c.id
@@ -99,32 +99,32 @@
 --ORDER BY z.name
 --LIMIT 3;
 
-** 2.	Listar los animales que son femeninos o hembras
+## 2.	Listar los animales que son femeninos o hembras
 --SELECT *
 --FROM animals
 --WHERE gender = 'F';
 
-** 3.	Listar todos los animales que están en peligro de extinción.
+## 3.	Listar todos los animales que están en peligro de extinción.
 --SELECT *
 --FROM animals
 --WHERE is_in_danger_of_extinction = true;
 
-** 4.	Consultar los zoológicos que tienen un área en metros cuadrados entre 100 y 450
+## 4.	Consultar los zoológicos que tienen un área en metros cuadrados entre 100 y 450
 --SELECT *
 --FROM zoos
 --WHERE area BETWEEN 100 AND 450;
 
-** 5.	Consultar cual es el zoológico con el presupuesto más alto (MÁX)
+## 5.	Consultar cual es el zoológico con el presupuesto más alto (MÁX)
 --SELECT *
 --FROM zoos
 --WHERE budget = (SELECT MAX(budget) FROM zoos);
 
-** 6.	Mostrar cuál es el zoológico con el área más pequeña.
+## 6.	Mostrar cuál es el zoológico con el área más pequeña.
 --SELECT *
 --FROM zoos
 --WHERE area = (SELECT MIN(area) FROM zoos);
 
-** 7.	Listar los animales en via de extincion del primer zoológico que se encuentra en África (Según los datos que tu insertate)
+## 7.	Listar los animales en via de extincion del primer zoológico que se encuentra en África (Según los datos que tu insertate)
 SELECT a.commom_name
 FROM animals AS a
 JOIN animals_by_zoo AS az ON a.id = az.animal_id
@@ -136,9 +136,9 @@ WHERE ct.name = 'Africa' AND a.is_in_danger_of_extinction = true
 ORDER BY a.commom_name;
 
 
-* III. Actualizar:
+# III. Actualizar:
 
-** 1.	Los zoológicos que tengan presupuesto inferior a 500, actualizar su presupuesto a 750:
+## 1.	Los zoológicos que tengan presupuesto inferior a 500, actualizar su presupuesto a 750:
 
 UPDATE zoos
 SET budget = 750
